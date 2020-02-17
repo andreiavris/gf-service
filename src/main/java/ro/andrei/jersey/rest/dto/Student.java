@@ -1,5 +1,6 @@
 package ro.andrei.jersey.rest.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +13,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
+@XmlRootElement
 public class Student {
     private Long id;
     private String name;
