@@ -49,6 +49,9 @@ public class StudentService {
     }
 
     public void deleteById(Long id) {
-        studentDAO.deleteById(id);
+        ro.andrei.jersey.repository.entity.Student student = studentDAO.getById(id);
+        if(student != null) {
+            studentDAO.delete(student);
+        }
     }
 }

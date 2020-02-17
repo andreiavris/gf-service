@@ -24,10 +24,7 @@ public class StudentDAO {
         em.persist(student);
     }
 
-    public void deleteById(Long id) {
-        Student student = getById(id);
-        if(student != null) {
-            em.remove(student);
-        }
+    public void delete(Student student) {
+        em.remove(student);
     }
 }
