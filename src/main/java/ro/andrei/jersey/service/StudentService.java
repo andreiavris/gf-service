@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.inject.Qualifier;
 import javax.ws.rs.NotFoundException;
 import ro.andrei.jersey.repository.dao.StudentDAO;
 import ro.andrei.jersey.rest.dto.Address;
@@ -12,7 +15,7 @@ import ro.andrei.jersey.rest.dto.Student;
 @Stateless
 public class StudentService {
 
-    @EJB
+    @Inject
     private StudentDAO studentDAO;
 
     public List<Student> getAll() {

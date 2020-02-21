@@ -1,12 +1,10 @@
 package ro.andrei.jersey.repository.dao;
 
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import ro.andrei.jersey.repository.entity.Student;
 
-@Stateless
 public class StudentDAO {
 
     @PersistenceContext(unitName = "myPU")
